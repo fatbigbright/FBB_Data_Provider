@@ -7,7 +7,9 @@ http.createServer(function(req, res){
    if(pathName == '/getData'){
       res.writeHead(200, {'Content-Type': 'application/json'});
       //var games = {"Konami": "Metal Gear Solid", "Square": "Final Fantasy", "Bandai": "Super Robot War", "Enix": "Dragon Quest", "Ubisoft": "Assassin Creed", "Santa Monica": "God of War"};
-      var games = {"games":["Metal Gear Solid", "Final Fantasy", "Super Robot War", "Dragon Quest", "Assassin Creed", "God of War"]};
+      //var games = "[\"Metal Gear Solid\", \"Final Fantasy\", \"Super Robot War\", \"Dragon Quest\", \"Assassin Creed\", \"God of War\"]";
+      var games = ["Metal Gear Solid", "Final Fantasy", "Super Robot War"];
+      //res.write(JSON.stringify(games));
       res.write(JSON.stringify(games));
       res.end();
    }else{
